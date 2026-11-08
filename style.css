@@ -506,3 +506,4 @@ td .ent { white-space: nowrap; }
 .detail-isi > * { min-width: 0; }
 .hit:focus, .graf .node-hit:focus, .alir:focus { outline: none; }
 .hit:focus-visible, .graf .node-hit:focus-visible { stroke: var(--accent); stroke-width: 2; }
+.nowrap { white-space: nowrap; }

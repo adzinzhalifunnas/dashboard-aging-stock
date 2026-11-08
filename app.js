@@ -1243,7 +1243,7 @@ function renderGraph(page) {
     const v = byK[c.id] || { unit: 0, aging: 0 };
     const redup = adaFilterToko() && !toko.some(tokoCocok);
     const dd = el("dd", { class: "kk-toko" });
-    toko.forEach((k, i) => { if (i) dd.append(", "); dd.append(entLink("toko", k, nomorToko(k))); });
+    toko.forEach((k, i) => { if (i) dd.append(" "); dd.append(el("span", { class: "nowrap" }, entLink("toko", k, nomorToko(k)), i < toko.length - 1 ? "," : "")); });
     return el("article", { class: "kk" + (redup ? " dim" : ""), style: `--c:${komVar(c.id)}` },
       el("h3", {}, el("i", { class: "kk-dot" }), c.nama),
       rich("div", `${c.jumlah_toko} toko · zona ${c.zona.split("; ").map((z) => z.replace(/ (\d+)$/, " ($1)")).join(", ")}`, { class: "kk-sub" }),
